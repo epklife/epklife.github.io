@@ -432,6 +432,35 @@
   footer .wrap{
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
   }
+
+  /* ---------- THE STAY ---------- */
+  section.stay{ padding:96px 0 100px; background:var(--paper); }
+  section.stay h2{ font-size:clamp(34px,5vw,52px); color:var(--pine); margin-bottom:28px; }
+  section.stay .eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brass); margin:0 0 16px; }
+  .stay-hero{ margin:0 0 24px; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--paper-dim); }
+  .stay-hero img{ width:100%; height:auto; }
+  .stay-hero figcaption, .stay-gallery figcaption{ font-size:13px; color:var(--granite); padding:12px 16px; }
+  .stay-facts{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 24px; }
+  .stay-facts span{ font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.04em; border:1px solid var(--line); border-radius:2px; padding:7px 12px; color:var(--pine); background:var(--paper-dim); }
+  .stay-copy{ max-width:640px; color:var(--granite); font-size:16.5px; margin:0 0 14px; }
+  .stay-cta{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin:26px 0 36px; }
+  .stay-cta-note{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--granite); }
+  .stay-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media (max-width:820px){ .stay-gallery{ grid-template-columns:1fr; } }
+  .stay-gallery figure{ margin:0; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--paper-dim); }
+  .stay-gallery img{ width:100%; height:300px; object-fit:cover; }
+  .stay-note{ font-size:13px; color:var(--granite); font-style:italic; margin-top:16px; }
+
+  .stay-hero img{height:420px;object-fit:cover}
+  .stay-hero-caption{font-size:13px;color:var(--granite);padding:12px 16px;margin:0}
+  .area-title{font-family:'Big Shoulders Display',sans-serif;font-size:30px;line-height:1.05;margin:44px 0 8px;color:var(--pine)}
+  .area-copy{max-width:640px;color:var(--granite);margin:0 0 4px}
+  .area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .area-grid figure{margin:0}
+  .area-grid img{width:100%;height:180px;object-fit:cover;border-radius:10px;display:block}
+  .area-grid figcaption{font-size:13px;color:var(--granite);margin-top:8px;line-height:1.45}
+  .area-credit{font-size:12px}
+  @media(max-width:720px){.area-grid{grid-template-columns:1fr 1fr}.stay-hero img{height:280px}}
 </style>
 </head>
 <body>
@@ -465,7 +494,7 @@
     </div>
 
     <div class="tile-grid">
-      <div class="tile">
+      <a class="tile tile-link" href="#the-stay">
         <div class="tile-icon" aria-hidden="true">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 78 L32 34 L45 54 L58 30 L95 78 Z" fill="currentColor"/>
@@ -476,10 +505,10 @@
           <h3>The Stay</h3>
           <p>Short-term rental, high in the California mountains</p>
         </div>
-        <div class="tag">Coming soon</div>
-      </div>
+        <div class="tag">Now taking inquiries</div>
+      </a>
 
-      <a class="tile tile-link" href="https://kaustubhv.github.io/PM-Career-Consulting/" target="_blank" rel="noopener">
+      <a class="tile tile-link" href="https://epklife.github.io/PM-Career-Consulting/" target="_blank" rel="noopener">
         <div class="tile-icon" aria-hidden="true">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <rect x="12" y="38" width="76" height="46" rx="4" fill="currentColor"/>
@@ -568,14 +597,58 @@
           <h3>Light Truck Rental</h3>
           <p>Available to rent when it's not on the road</p>
         </div>
-        <div class="tag">Listed</div>
+        <div class="tag">Available now</div>
       </div>
     </div>
     <div class="hero-base"></div>
   </div>
 </section>
 
-<section class="services" id="services">
+
+<!-- The Stay -->
+  <section class="stay" id="the-stay">
+    <div class="container">
+      <p class="section-eyebrow">The Stay — Oakhurst, California</p>
+      <h2 class="section-title">See the house.</h2>
+      <div class="stay-hero">
+        <img src="images/elliott-living-room.jpg" alt="The living room at 40885 Elliott Dr" loading="lazy">
+        <p class="stay-hero-caption">The living room, as it is today.</p>
+      </div>
+      <div class="stay-facts">
+        <span class="chip">Oakhurst · gateway to Yosemite</span>
+        <span class="chip">Sleeps 6 + 1 dog</span>
+        <span class="chip">2-night minimum</span>
+        <span class="chip">Hot tub</span>
+        <span class="chip">EV charging</span>
+        <span class="chip">Self-hosted — no management company</span>
+      </div>
+      <p class="stay-copy">We&rsquo;re taking inquiries now for stays starting this winter. Email us your dates and party size, and we&rsquo;ll confirm availability and rates directly — no booking platform, no fees on top.</p>
+      <p class="stay-cta"><a class="button button--primary" href="mailto:elliotadmin@epkstay.com?subject=Elliott%20Dr%20stay%20%E2%80%94%20availability%20inquiry&body=Dates%3A%0AGuests%20(adults%2C%20kids%2C%20dog)%3A%0A">Email for availability &rarr;</a></p>
+      <div class="stay-gallery">
+        <figure><img src="images/elliott-front.jpg" alt="The house from the street" loading="lazy"><figcaption>The house from the street &mdash; red door, you can&rsquo;t miss it</figcaption></figure>
+        <figure><img src="images/elliott-hot-tub.jpg" alt="Hot tub under the pergola" loading="lazy"><figcaption>Hot tub under the pergola</figcaption></figure>
+        <figure><img src="images/elliott-dining.jpg" alt="Dining room" loading="lazy"><figcaption>Dining room &mdash; seats six</figcaption></figure>
+        <figure><img src="images/elliott-bedroom.jpg" alt="Bedroom" loading="lazy"><figcaption>Bedroom &mdash; sleep well, hike early</figcaption></figure>
+        <figure><img src="images/elliott-bunk-room.jpg" alt="Bunk room" loading="lazy"><figcaption>Bunk room &mdash; sleeps the kids</figcaption></figure>
+        <figure><img src="images/elliott-bathroom.jpg" alt="Bathroom" loading="lazy"><figcaption>Bathroom</figcaption></figure>
+        <figure><img src="images/elliott-patio.jpg" alt="Patio with fire table" loading="lazy"><figcaption>Patio &mdash; fire table by the sliding doors</figcaption></figure>
+        <figure><img src="images/elliott-backyard.jpg" alt="Backyard" loading="lazy"><figcaption>Backyard &mdash; grill and open lawn</figcaption></figure>
+      </div>
+      <p class="stay-note">Listing photos of the house as it is today.</p>
+      <h3 class="area-title">While you&rsquo;re here</h3>
+      <p class="area-copy">Oakhurst is the last real town before Yosemite&rsquo;s South Gate &mdash; barbecue, a brewery, waterfall trails, and a bus into the Valley.</p>
+      <div class="area-grid">
+        <figure><img src="images/area-smokehouse.jpg" alt="Smokehouse 41" loading="lazy"><figcaption><strong>Smokehouse 41</strong> &mdash; low &amp; slow BBQ on Highway 41</figcaption></figure>
+        <figure><img src="images/area-brewery.jpg" alt="South Gate Brewing Company" loading="lazy"><figcaption><strong>South Gate Brewing Co.</strong> &mdash; craft beer in Oakhurst</figcaption></figure>
+        <figure><img src="images/area-trail.jpg" alt="Lewis Creek Trail" loading="lazy"><figcaption><strong>Lewis Creek Trail</strong> &mdash; waterfalls minutes away</figcaption></figure>
+        <figure><img src="images/area-yosemite.jpg" alt="Half Dome, Yosemite" loading="lazy"><figcaption><strong>Yosemite</strong> &mdash; the South Gate, about 30 minutes</figcaption></figure>
+        <figure><img src="images/area-yarts.jpg" alt="YARTS bus to Yosemite" loading="lazy"><figcaption><strong>YARTS</strong> &mdash; bus to the Valley in season, leave the car behind</figcaption></figure>
+      </div>
+      <p class="stay-note area-credit">Area photos: Smokehouse 41 via Family Destinations Guide &middot; South Gate Brewing Co. via HappyCow &middot; Lewis Creek Trail via Yelp &middot; YARTS via yosemite.com.</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
   <div class="wrap">
     <div class="section-head">
       <h2>What we do</h2>
@@ -586,9 +659,9 @@
       <div class="card">
         <div class="num">01</div>
         <h3>The Stay</h3>
-        <div class="status">Coming soon &middot; not yet bookable</div>
+        <div class="status">Now taking inquiries &middot; email for availability</div>
         <p>A short-term rental tucked into the California mountains, near one of the small towns that serve as a gateway to Yosemite — hosted personally, with every message, changeover, and local recommendation handled by us, not a management company.</p>
-        <div class="foot">California mountains &middot; Self-hosted</div>
+        <div class="foot"><a href="#the-stay" style="color:var(--lake); text-decoration:underline; text-underline-offset:2px;">See the house &amp; check availability &rarr;</a><br>California mountains &middot; Self-hosted</div>
       </div>
 
       <div class="card">
@@ -651,10 +724,10 @@
       <div class="app-banner-text">
         <div class="num truck-num">06</div>
         <h3 class="truck-h3">Light Truck Rental</h3>
-        <div class="status truck-status">Listed &middot; available now</div>
-        <p class="truck-p">A light truck, available to rent when it's not out on property runs — full details and current listing on Facebook Marketplace.</p>
+        <div class="status truck-status">Available now</div>
+        <p class="truck-p">A light truck, available to rent when it's not out on property runs — full details, pricing, and quotes on our truck page.</p>
       </div>
-      <a href="https://www.facebook.com/marketplace/item/1034522496028996/?mibextid=6ojiHh" target="_blank" rel="noopener" class="btn btn-primary app-banner-btn">View listing</a>
+      <a href="https://epklife.github.io/truck/" class="btn btn-primary app-banner-btn">See the truck</a>
     </div>
   </div>
 </section>
@@ -688,17 +761,17 @@
           <div class="row"><span class="k">Email</span><a href="mailto:epkstay@gmail.com">epkstay@gmail.com</a></div>
           <div class="row"><span class="k">Phone</span><a href="tel:+15125221528">512.522.1528</a></div>
           <div class="row"><span class="k">Based in</span><span>Fremont, California</span></div>
-          <div class="row"><span class="k">Stay location</span><span>California mountains &middot; announced closer to launch</span></div>
+          <div class="row"><span class="k">Stay location</span><span>Oakhurst, California &middot; near Yosemite</span></div>
         </div>
       </div>
       <div>
         <p class="eyebrow mono" style="color:var(--brass);">Quick routing</p>
         <div class="service-list">
-          <div class="row"><span>Stay updates</span><span>epkstay@gmail.com</span></div>
+          <div class="row"><span>Stay availability</span><a href="mailto:elliotadmin@epkstay.com">elliotadmin@epkstay.com</a></div>
           <div class="row"><span>Career consulting</span><span>epkstay@gmail.com</span></div>
           <div class="row"><span>Dog care (Fremont)</span><span>epkstay@gmail.com</span></div>
           <div class="row"><span>App waitlist</span><span>epkstay@gmail.com</span></div>
-          <div class="row"><span>Light truck rental</span><span>Facebook Marketplace</span></div>
+          <div class="row"><span>Light truck rental</span><a href="https://epklife.github.io/truck/">epklife.github.io/truck/</a></div>
         </div>
       </div>
     </div>
